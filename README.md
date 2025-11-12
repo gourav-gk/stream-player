@@ -48,14 +48,18 @@ export default function App() {
 
 ## 🧠 Props
 
-| Prop        | Type     | Description |
-|--------------|----------|-------------|
-| `videoSrc`   | `string` | The video source URL (HLS `.m3u8` or MP4). |
-| `poster`     | `string` | Optional thumbnail image for the video. |
-| `autoPlay`   | `boolean` | Automatically play when loaded. |
-| `controls`   | `boolean` | Show native video controls. |
-| `onPlay`     | `() => void` | Callback when playback starts. |
-| `onPause`    | `() => void` | Callback when paused. |
+| Prop              | Type                                                          | Description                                           |
+| ----------------- | ------------------------------------------------------------- | ----------------------------------------------------- |
+| `id`              | `string`                                                      | Unique ID for each player instance.                   |
+| `src`             | `string`                                                      | The video source URL (supports HLS `.m3u8` and MP4).  |
+| `poster`          | `string` *(optional)*                                         | Thumbnail image shown before playback starts.         |
+| `captions`        | `{ src: string; lang: string; label: string }[]` *(optional)* | List of caption tracks with URL, language, and label. |
+| `previewImg`      | `string` *(optional)*                                         | Image shown when hovering or previewing video.        |
+| `width`           | `string` *(optional)*                                         | Custom width (e.g. `"100%"`, `"800px"`).              |
+| `maxHeight`       | `string` *(optional)*                                         | Limit video height for responsive layouts.            |
+| `setting`         | `boolean` *(optional)*                                        | Toggle to show or hide player settings UI.            |
+| `backgroundColor` | `string` *(optional)*                                         | Background color behind the video area.               |
+| `theater`         | `string` *(optional)*                                         | Theater mode enable.                                  |
 
 ---
 
